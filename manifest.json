@@ -1,0 +1,21 @@
+{
+    "name": "SARAN RAJ M",
+    "short_name": "M S RAJ",
+    "icons": [
+      {
+        "src": "assets/img/ico.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+	  {
+        "src": "assets/img/ico.png",
+        "sizes": "200x200",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff"
+  }
+  
