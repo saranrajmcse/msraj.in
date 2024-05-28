@@ -55,6 +55,8 @@ body.dark-theme{
 }
 body.noscroll {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 /*========== Button Dark/Light ==========*/
 .change-theme{
