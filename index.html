@@ -12,8 +12,6 @@
         <meta name="keywords" content="developer, python , .net, web development">
         <!--========== BOX ICONS ==========-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2171992220635905"
-     crossorigin="anonymous"></script>
         <!--========== CSS ==========-->
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="icon" href="assets/img/ico.png">
@@ -392,15 +390,15 @@
         <!--========== MAIN JS ==========-->
         <script src="assets/js/main.js"></script>
 
-        <div class="form-modal">
-            <div class="modal-content">
+        <div class="form-modal" id="overlay">
+            <div class="modal-content" id="contactdiv">
                 <div class="close"> + </div>
                 <div class="content-wrapper">
                       <form id="contact-form">
                          <label class="lblCon" id="lblConHead">Contact</label>
                         <input type="text" id="user_name" placeholder="Name">
                         <input type="email" id="user_email" placeholder="Email">
-                        <input type="tel" id="user_contact" placeholder="Mobile">
+                        <input type="tel" id="user_contact" placeholder="Mobile" style="display: none;">
                         <textarea class="massage" id="user_message" placeholder="Message"></textarea>
                         <label class="lblrep" id="lblreply"></label>
                         <button type="submit" class="submit btn">Send</button>                       
@@ -447,7 +445,7 @@
             user_message: userMessage
         };
      // Check if required fields are empty
-     if (userName.trim() === '' || userEmail.trim() === '' || userContact.trim() === '' || userMessage.trim() === '') {
+     if (userName.trim() === '' || userEmail.trim() === '' ||  userMessage.trim() === '') {
             // If any required field is empty, don't send the email
             document.getElementById("lblreply").innerHTML="Please fill all fields.";
             return; // Exit the function
@@ -472,6 +470,19 @@
         document.getElementById("lblreply").innerHTML="";
             });
         });
+
+
+// contactform-close
+const overlay = document.getElementById('overlay');
+const contactdiv = document.getElementById('contactdiv');
+
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {  // Use === for comparison
+        overlay.style.display = "none";
+        document.getElementById("lblreply").innerHTML="";
+    }
+});
+
     </script>
 	
     </html>
