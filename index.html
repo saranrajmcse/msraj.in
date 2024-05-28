@@ -421,11 +421,13 @@
     
             signUp.addEventListener("click", () => {
                 modal.style.display = "flex";
+                document.body.classList.add('noscroll');
             });
     
             close.addEventListener("click", () => {
                 modal.style.display = "none";
                 document.getElementById("lblreply").innerHTML="";
+                document.body.classList.remove('noscroll');
             });
     
             const contactForm = document.getElementById("contact-form");
@@ -480,6 +482,7 @@ overlay.addEventListener('click', (e) => {
     if (e.target === overlay) {  // Use === for comparison
         overlay.style.display = "none";
         document.getElementById("lblreply").innerHTML="";
+        document.body.classList.remove('noscroll'); 
     }
 });
 

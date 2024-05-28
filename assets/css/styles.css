@@ -53,7 +53,9 @@ body.dark-theme{
   --container-color-alt: #181616;
   --body-color: #2B2B2B;
 }
-
+body.noscroll {
+  overflow: hidden;
+}
 /*========== Button Dark/Light ==========*/
 .change-theme{
   position: absolute;
