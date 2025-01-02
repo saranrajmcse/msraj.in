@@ -16,17 +16,3 @@ self.addEventListener("fetch", e => {
     );
 });
 
-// Service Worker Code
-self.addEventListener('activate', (event) => {
-    event.waitUntil(
-        caches.keys().then((cacheNames) => {
-            // Iterate through all caches and delete them
-            return Promise.all(
-                cacheNames.map((cacheName) => {
-                    console.log(`Deleting cache: ${cacheName}`);
-                    return caches.delete(cacheName);
-                })
-            );
-        })
-    );
-});
